@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bienvenido on salion blog</title>
+    <link>/tags/bienvenido/</link>
+    <description>Recent content in Bienvenido on salion blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/bienvenido/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bienvenido</title>
+      <link>/posts/bienvenido/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/bienvenido/</guid>
+      <description>Bienvenido al blog de salioon
+Bienvenido al blog de salion soy un aficionado de linux</description>
+    </item>
+    
+  </channel>
+</rss>

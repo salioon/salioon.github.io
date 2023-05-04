@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on salion blog</title>
+    <link>/tags/docker/</link>
+    <description>Recent content in docker on salion blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>como instalar docker</title>
+      <link>/posts/docker/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/docker/</guid>
+      <description>Como Instalar docker en Arch Linux:
+1sudo pacman -S docker docker-compose docker.io </description>
+    </item>
+    
+  </channel>
+</rss>

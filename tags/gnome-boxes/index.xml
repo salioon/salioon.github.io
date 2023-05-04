@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gnome-boxes on salion blog</title>
+    <link>/tags/gnome-boxes/</link>
+    <description>Recent content in gnome-boxes on salion blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="/tags/gnome-boxes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gnome-Boxes y Virt-Manager</title>
+      <link>/posts/gnome-boxes/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/gnome-boxes/</guid>
+      <description>instalar gnome-boxes y Virt-Manager en Arch Linux:
+1sudo pacman -S gnome-boxes virt-manager </description>
+    </item>
+    
+  </channel>
+</rss>

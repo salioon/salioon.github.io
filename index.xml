@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>salion blog</title>
+    <link>/</link>
+    <description>Recent content on salion blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 04 May 2023 16:39:41 +0100</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Archlinux</title>
+      <link>/posts/archlinux/</link>
+      <pubDate>Thu, 04 May 2023 16:39:41 +0100</pubDate>
+      
+      <guid>/posts/archlinux/</guid>
+      <description>Como instalar arch linux comandos: root@archiso ~ # loadkeys es
+Ponemos nuestro teclado español
+root@archiso ~ # loadkeys es
+Ponemos nuestro teclado para Americano
+root@archiso ~ # loadkeys us
+● Instalación de Arch en BIOS/Legacy
+● Instalación de Arch en UEFI/EFI
+Compruebe el tipo de arranque, ejecutando este comando para ver una lista con ls
+root@archiso ~ # ls /sys/firmware/efi/efivars
+Resultado si es UEFI : Si hay archivos en efivars significa que tu sistema es UEFI/EFI</description>
+    </item>
+    
+    <item>
+      <title>Debload android</title>
+      <link>/posts/debloadandroid/</link>
+      <pubDate>Thu, 04 May 2023 16:34:57 +0100</pubDate>
+      
+      <guid>/posts/debloadandroid/</guid>
+      <description>Debloat android:
+adb devices - Muestra todos los Dispositivos Conectados
+adb reboot - renicia el movil
+adb reboot bootloader- reinicia en el bootloader
+adb reboot recovery - reinicia el movil en el modo recovery
+adb reboot fastboot - reinicia el movil en modo fastboot
+adb shell - entra a la raiz del telefono en una shell
+adb shell pm list packages - Muestra la lista de paquetes instalados en tu movil</description>
+    </item>
+    
+    <item>
+      <title>Bienvenido</title>
+      <link>/posts/bienvenido/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/bienvenido/</guid>
+      <description>Bienvenido al blog de salioon
+Bienvenido al blog de salion soy un aficionado de linux</description>
+    </item>
+    
+    <item>
+      <title>como instalar docker</title>
+      <link>/posts/docker/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/docker/</guid>
+      <description>Como Instalar docker en Arch Linux:
+1sudo pacman -S docker docker-compose docker.io </description>
+    </item>
+    
+    <item>
+      <title>Gnome-Boxes y Virt-Manager</title>
+      <link>/posts/gnome-boxes/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/gnome-boxes/</guid>
+      <description>instalar gnome-boxes y Virt-Manager en Arch Linux:
+1sudo pacman -S gnome-boxes virt-manager </description>
+    </item>
+    
+    <item>
+      <title>Hugo Web Static Generator</title>
+      <link>/posts/hugo/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/posts/hugo/</guid>
+      <description>Editor de webs estaticas hugo:
+Guia rapida de como manejarlo
+Aprende a crear una web hugo en minutos.
+en este tutorial aprenderas:
+Crear una web hugo añadir contenido Configurar el sitio Publicar el sitio Prerequisitos
+Antes de que empiezes el tutorial nesecitas:
+Instalr Hugo (ultima version) Instalar Git Deves estar comodo para trabajar con la linea de comandos. Crear el sitio Commandos
+Si tu eres un usuario windows:
+no uses simbolo del sistema mp uses powershell usa Windows PowerShell Ejecuta esos comandos desde PowerShell o Linux terminalcon WSL or Git Bash PowerShell and Windows PowerShell son diferentes aplicaciones.</description>
+    </item>
+    
+    <item>
+      <title>Informacion</title>
+      <link>/about/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>soy un usuario intermedio de linux que anda probando distribuciones y programacion</description>
+    </item>
+    
+    <item>
+      <title>Proyectos</title>
+      <link>/proyectos/</link>
+      <pubDate>Sat, 29 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>/proyectos/</guid>
+      <description>crear dotfiles de las config de linux..
+crear web mejor hecha.
+Aprender Sql
+Aprender python Pendiente a Futuro
+Aprender a usar docker</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Archlinux // salion blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="SaliooN" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.0b6c9df2d98749ee2ceaeb61991f907450f3d406bd9524f5fc1b39f6c0ae6243.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Archlinux"/>
+<meta name="twitter:description" content="Como instalar arch linux comandos: root@archiso ~ # loadkeys es
+Ponemos nuestro teclado español
+root@archiso ~ # loadkeys es
+Ponemos nuestro teclado para Americano
+root@archiso ~ # loadkeys us
+● Instalación de Arch en BIOS/Legacy
+● Instalación de Arch en UEFI/EFI
+Compruebe el tipo de arranque, ejecutando este comando para ver una lista con ls
+root@archiso ~ # ls /sys/firmware/efi/efivars
+Resultado si es UEFI : Si hay archivos en efivars significa que tu sistema es UEFI/EFI"/>
+
+    <meta property="og:title" content="Archlinux" />
+<meta property="og:description" content="Como instalar arch linux comandos: root@archiso ~ # loadkeys es
+Ponemos nuestro teclado español
+root@archiso ~ # loadkeys es
+Ponemos nuestro teclado para Americano
+root@archiso ~ # loadkeys us
+● Instalación de Arch en BIOS/Legacy
+● Instalación de Arch en UEFI/EFI
+Compruebe el tipo de arranque, ejecutando este comando para ver una lista con ls
+root@archiso ~ # ls /sys/firmware/efi/efivars
+Resultado si es UEFI : Si hay archivos en efivars significa que tu sistema es UEFI/EFI" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/archlinux/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-04T16:39:41+01:00" />
+<meta property="article:modified_time" content="2023-05-04T16:39:41+01:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/avatar.jpg" alt="SaliooN" /></a>
+      <span class="app-header-title">salion blog</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Inicio</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Buscar</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">Informacion</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/proyectos/">Proyectos</a>
+      </nav>
+      <p>Blog de salion</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/salioon" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://gitlab.com/salioon" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-gitlab">
+  <title>gitlab</title>
+  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Archlinux</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 4, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          4 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="como-instalar-arch-linux-comandos"><em>Como instalar arch linux comandos:</em></h2>
+<p>root@archiso ~ # loadkeys es</p>
+<p>Ponemos nuestro teclado español</p>
+<p>root@archiso ~ # loadkeys es</p>
+<p>Ponemos nuestro teclado para Americano</p>
+<p>root@archiso ~ # loadkeys us</p>
+<p>● Instalación de Arch en BIOS/Legacy</p>
+<p>● Instalación de Arch en UEFI/EFI</p>
+<p>Compruebe el tipo de arranque, ejecutando este comando para ver una lista con ls</p>
+<p>root@archiso ~ # ls /sys/firmware/efi/efivars</p>
+<ol>
+<li>Resultado si es UEFI :</li>
+</ol>
+<p>Si hay archivos en efivars significa que tu sistema es UEFI/EFI</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Presiona aqui para continuar con la instalación en UEFI/EFI &laquo;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<ol start="2">
+<li>Resultado si es BIOS/Legacy :</li>
+</ol>
+<p>Si NO existen archivos en efivars significa que tu sistema es BIOS/Legacy</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Presiona aqui para continuar con la instalación en BIOS/Legacy &laquo;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>UEFI o BIOS mediante etiqueta del disco duro</p>
+<p>root@archiso ~ # fdisk -l</p>
+<p>El tipo de etiqueta del disco es GPT si es UEFI</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Presiona aqui para continuar con la instalación en UEFI/EFI &laquo;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>El tipo de etiqueta del disco es DOS si es BIOS/LEGACY</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>Presiona aqui para continuar con la instalación en BIOS/Legacy &laquo;&lt;</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Ventajas y desventajas de UEFI o BIOS/LEGACY</p>
+<p>PARA SISTEMAS UEFI CON DISCOS EN GPT
+● Tiene disponible 128 particiones primarias
+● Es necesario tener su propia particion EFI para arrancar el sistema
+● Su particion de arranque debe ser formateada en FAT32 para arrancar el sistema
+● Su ruta será /boot/efi</p>
+<p>PARA SISTEMAS BIOS/LEGACY CON DISCOS EN MBR
+● Tiene disponible 4 particiones primarias y el resto son extendidas
+● No es necesario tener una partición para su arranque
+● En caso quieran tener su propia partición debe ser formateada en EXT4
+● Su ruta será /boot/</p>
+<p>Si usted ve la necesidad de cambiar de una tabla de partición a otra, use una de las siguientes opciones. Tenga en cuenta que este procedimiento eliminará la información del dispositivo de almacenamiento escogido.</p>
+<p>Para convertir su disco a GPT :</p>
+<p>root@archiso ~ # parted /dev/vda mklabel gpt</p>
+<p>Para convertir su disco a MBR.</p>
+<p>root@archiso ~ # parted /dev/vda mklabel msdos</p>
+<p>Podemos confirmar los cambios con el siguiente comando :</p>
+<p>root@archiso ~ # parted -l | egrep &ldquo;/dev/|msdos|gpt&rdquo;</p>
+<p>Disco Duro</p>
+<p>Primero debemos identificar como es la ruta de nuestros discos luego saber cuales son particiones.</p>
+<p>Ruta de disco pueden ser:</p>
+<pre><code>/dev/sda (sdd o hdd)
+/dev/sdb (sdd o hdd)
+/dev/sdc (Así cambia de letra...)
+/dev/nvme0n1 (veMMC o SD Card)
+/dev/mmcblk0 (veMMC o SD Card)
+</code></pre>
+<p>Las Particiones</p>
+<p>Pueden ser:</p>
+<pre><code>/dev/sda1
+/dev/sda2
+/dev/sda3
+/dev/nvme0n1p1
+/dev/nvme0n1p2
+/dev/nvme0n1p3
+/dev/mmcblk0p1
+/dev/mmcblk0p2
+/dev/mmcblk0p3
+</code></pre>
+<p>Para revisar nuestros discos y particiones con :</p>
+<p>root@archiso ~ # lsblk</p>
+<blockquote>
+<blockquote>
+<p>Arch Linux incluye las siguientes herramientas de particionado:</p>
+</blockquote>
+</blockquote>
+<pre><code>● cfdisk es para crear y modificar particiones facilmente
+● Fuente: https://wiki.archlinux.org/index.php/Partitioning
+</code></pre>
+<p>Estructura de ficheros en Linux</p>
+<p>Debemos saber que de root [ / ] nacen las demás carpetas
+La ventaja que Linux permite asignarle una partición para cada carpeta</p>
+<p>Podemos tener /boot/ en una partición
+Podemos tener /home/ en otra partición</p>
+<p>/home/ la carpeta HOME guarda los archivos de todos los usuarios algo parecido a un DISCO D: de windows
+Todo depende si queremos tenerlo separado en otra partición</p>
+<p>Ejemplos de particionados en UEFI - GPT</p>
+<blockquote>
+<blockquote>
+<p>Ejemplo 1 de particionado en GPT</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  EFI SYSTEM en FAT32
+/dev/sda2  ROOT - HOME - ETC...
+</code></pre>
+<blockquote>
+<blockquote>
+<p>Ejemplo 2 de particionado en GPT</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  EFI SYSTEM en FAT32
+/dev/sda2  ROOT - HOME - ETC...
+/dev/sda3  [SWAP]
+</code></pre>
+<blockquote>
+<blockquote>
+<p>Ejemplo 3 de particionado en GPT</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  EFI SYSTEM
+/dev/sda2  ROOT
+/dev/sda3  [SWAP]
+/dev/sda4  HOME
+</code></pre>
+<blockquote>
+<blockquote>
+<p>La documentación oficial nos recomienda usar en GPT la siguiente estructura</p>
+</blockquote>
+</blockquote>
+<p>Ejemplos de particionados en BIOS/LEGACY - MBR</p>
+<blockquote>
+<blockquote>
+<p>Ejemplo 1 de particionado en MBR</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  BOOT - ROOT - HOME - ETC...)
+</code></pre>
+<blockquote>
+<blockquote>
+<p>Ejemplo 2 de particionado en MBR</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  BOOT
+/dev/sda2  ROOT - HOME - ETC...
+/dev/sda3  [SWAP]
+</code></pre>
+<blockquote>
+<blockquote>
+<p>Ejemplo 3 de particionado en MBR</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  BOOT
+/dev/sda2  ROOT
+/dev/sda3  [SWAP]
+/dev/sda4  HOME
+</code></pre>
+<blockquote>
+<blockquote>
+<p>Ejemplo 4 de particionado en MBR</p>
+</blockquote>
+</blockquote>
+<pre><code>/dev/sda1  BOOT
+/dev/sda2  ROOT
+/dev/sda3  [SWAP]
+/dev/sda4  HOME
+/dev/sda5  Extendida (esta no se monta solo es la conexión)
+/dev/sda6  Extendida
+/dev/sda7  Extendida
+</code></pre>
+<blockquote>
+<blockquote>
+<p>La documentación oficial nos recomienda usar en MBR la siguiente estructura &laquo;
+CodigoCristo
+Memoria SWAP</p>
+</blockquote>
+</blockquote>
+<pre><code>● Menos de 1GB RAM física    =  2GB de SWAP
+● Entre 2GB a 4GB RAM física =  2GB a 4GB de SWAP
+● 8GB de RAM física          =  4GB de SWAP
+● Más de 8GB de RAM física   =  2GB a 4GB de SWAP
+</code></pre>
+<blockquote>
+<blockquote>
+<p>Pero si necesitan hibernación 8Gb serán suficientes &laquo;</p>
+</blockquote>
+</blockquote>
+<p>● Instalación de Arch en BIOS/Legacy</p>
+<p>● Instalación de Arch en UEFI/EFI</p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
