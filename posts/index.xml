@@ -6,7 +6,20 @@
     <description>Recent content in Posts on salion blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 04 May 2023 16:39:41 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 May 2023 09:24:27 +0100</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gentoo Guia Instalacion</title>
+      <link>/posts/gentoo/</link>
+      <pubDate>Wed, 24 May 2023 09:24:27 +0100</pubDate>
+      
+      <guid>/posts/gentoo/</guid>
+      <description>Nesecitas esta Herramienta una live cd con linux : arch,mint,gentoo mininal o lo que sea.
+Guia instaclion Gentoo Linux:
+sudo cfdisk /dev/sda (crear particiones) setear formato a partciones: sudo mkfs.vfat -F 32 /dev/sda1
+sudo mkfs.vfat -F 32 /dev/sda1 sudo mkfs.ext4 /dev/sda3
+no usar este comando a menos que se use en partciones menores de 8gb de disco: mkfs.ext4 -T small /dev/device crear formato swap a la particion: sudo mkswap /dev/sda2</description>
+    </item>
+    
     <item>
       <title>Archlinux</title>
       <link>/posts/archlinux/</link>

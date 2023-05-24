@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Gentoo Guia Instalacion // salion blog</title>
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.111.3">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="SaliooN" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="/css/main.min.0b6c9df2d98749ee2ceaeb61991f907450f3d406bd9524f5fc1b39f6c0ae6243.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Gentoo Guia Instalacion"/>
+<meta name="twitter:description" content="Nesecitas esta Herramienta una live cd con linux : arch,mint,gentoo mininal o lo que sea.
+Guia instaclion Gentoo Linux:
+sudo cfdisk /dev/sda (crear particiones) setear formato a partciones: sudo mkfs.vfat -F 32 /dev/sda1
+sudo mkfs.vfat -F 32 /dev/sda1 sudo mkfs.ext4 /dev/sda3
+no usar este comando a menos que se use en partciones menores de 8gb de disco: mkfs.ext4 -T small /dev/device crear formato swap a la particion: sudo mkswap /dev/sda2"/>
+
+    <meta property="og:title" content="Gentoo Guia Instalacion" />
+<meta property="og:description" content="Nesecitas esta Herramienta una live cd con linux : arch,mint,gentoo mininal o lo que sea.
+Guia instaclion Gentoo Linux:
+sudo cfdisk /dev/sda (crear particiones) setear formato a partciones: sudo mkfs.vfat -F 32 /dev/sda1
+sudo mkfs.vfat -F 32 /dev/sda1 sudo mkfs.ext4 /dev/sda3
+no usar este comando a menos que se use en partciones menores de 8gb de disco: mkfs.ext4 -T small /dev/device crear formato swap a la particion: sudo mkswap /dev/sda2" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/posts/gentoo/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-05-24T09:24:27+01:00" />
+<meta property="article:modified_time" content="2023-05-24T09:24:27+01:00" />
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="/"><img class="app-header-avatar" src="/avatar.jpg" alt="SaliooN" /></a>
+      <span class="app-header-title">salion blog</span>
+      <nav class="app-header-menu">
+          <a class="app-header-menu-item" href="/">Inicio</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/tags/">Buscar</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/about/">Informacion</a>
+             - 
+          
+          <a class="app-header-menu-item" href="/proyectos/">Proyectos</a>
+      </nav>
+      <p>Blog de salion</p>
+      <div class="app-header-social">
+        
+          <a href="https://github.com/salioon" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>My Github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+          </a>
+        
+          <a href="https://gitlab.com/salioon" target="_blank" rel="noreferrer noopener me">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-gitlab">
+  <title>gitlab</title>
+  <path d="M22.65 14.39L12 22.13 1.35 14.39a.84.84 0 0 1-.3-.94l1.22-3.78 2.44-7.51A.42.42 0 0 1 4.82 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.49h8.1l2.44-7.51A.42.42 0 0 1 18.6 2a.43.43 0 0 1 .58 0 .42.42 0 0 1 .11.18l2.44 7.51L23 13.45a.84.84 0 0 1-.35.94z"></path>
+</svg>
+          </a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Gentoo Guia Instalacion</h1>
+      <div class="post-meta">
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          May 24, 2023
+        </div>
+        <div>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          7 min read
+        </div>
+      </div>
+    </header>
+    <div class="post-content">
+      <h2 id="nesecitas-esta-herramienta"><strong>Nesecitas esta Herramienta</strong></h2>
+<p>una live cd con linux : arch,mint,gentoo mininal o lo que sea.</p>
+<p>Guia instaclion Gentoo Linux:</p>
+<h2 id="sudo-cfdisk-devsda-----crear-particiones">sudo cfdisk /dev/sda     (crear particiones)</h2>
+<p>setear formato a partciones:
+sudo mkfs.vfat -F 32 /dev/sda1</p>
+<p>sudo mkfs.vfat -F 32 /dev/sda1
+sudo mkfs.ext4 /dev/sda3</p>
+<p>no usar este comando a menos que se use en partciones menores de 8gb de disco:
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+<!-- raw HTML omitted --><br>
+mkfs.ext4 -T small /dev/device
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted --></p>
+<hr>
+<p>crear formato swap a la particion:
+sudo mkswap /dev/sda2</p>
+<p>activar la swap de memoria en la particion:
+sudo swapon /dev/sda2</p>
+<p>crear punto de montaje en gentoo:
+sudo mkdir &ndash;parents /mnt/gentoo</p>
+<h2 id="sudo-mount-devsda3-mntgentoo">montar particion raiz en gentoo
+sudo mount /dev/sda3 /mnt/gentoo</h2>
+<p>entrar en el directorio del sistema:
+cd /mnt/gentoo</p>
+<p>bajar tallbar por links o de forma natural desde mirrors  distfiles:
+sudo links <a href="https://www.gentoo.org/downloads/mirrors/">https://www.gentoo.org/downloads/mirrors/</a>   o con wget  con el nombre del archivo</p>
+<p>descomprimir  tallbar en la raiz principal:
+sudo tar xpvf stage3-<em>.tar.xz &ndash;xattrs-include=&rsquo;</em>.*&rsquo; &ndash;numeric-owner</p>
+<hr>
+<p>editar portage:</p>
+<p>nano -w /mnt/gentoo/etc/portage/make.conf</p>
+<p>configuracion del portage recomendable:</p>
+<pre tabindex="0"><code>COMMON_FLAGS=&#34;-march=native -O2 -pipe&#34;
+CFLAGS=&#34;${COMMON_FLAGS}&#34;
+CXXFLAGS=&#34;${COMMON_FLAGS}&#34;
+FCFLAGS=&#34;${COMMON_FLAGS}&#34;
+FFLAGS=&#34;${COMMON_FLAGS}&#34;
+
+# NOTE: This stage was built with the bindist Use flag enabled
+
+# This sets the language of build output to English.
+# Please keep this setting intact when reporting bugs.
+LC_MESSAGES=C
+MAKEOPTS=&#34;-j10&#34;
+USE=&#34;-X acl alsa pipewire pulseaudio symlink alsa-plugin dbus polkit policykit savedconfig fontconfig truetype -test doc nls -debug dbusmenu -introspection wayland -vala -wayland&#34;
+ACCEPT_KEYWORDS=&#34;~amd64&#34;
+ACCEPT_KEYWORDS=&#34;amd64&#34;
+ACCEPT_LICENSE=&#34;* -@EULA&#34;
+ACCEPT_LICENSE=&#34;*&#34;
+ACCEPT_LICENSES=&#34;*&#34;
+ACEPPT_LICENSE=&#34;-* @FREE&#34;
+ACCEPT_LICENSE=&#34;-* @BFREE @BYNARY-REDISTRIBUTABLE&#34;
+GRUB_PLATAFORMS=&#34;efi-64&#34;
+VIDEO_CARDS=&#34;amdgpu&#34;
+INPUT_DEVICES=&#34;evdev synaptics keyboard mouse audio dbus dbusmenu libxinput libinput joystick wacom&#34;
+EMERGE_DEFAULT_OPTS=&#34;--autounmask=y&#34;
+
+GENTOO_MIRRORS=&#34;http://mirror.init7.net/gentoo/ https://mirror.init7.net/gentoo/ https://mirrors.ircam.fr/pub/gentoo-distfiles/&#34;
+
+
+GRUB_PLATFORMS=&#34;efi-64&#34;
+</code></pre><hr>
+<p>selecionnar  repositorio automatico:</p>
+<pre tabindex="0"><code>sudo mirrorselect -i -o &gt;&gt; /mnt/gentoo/etc/portage/make.conf
+
+crear repositorios manuales:
+sudo mkdir --parents /mnt/gentoo/etc/portage/repos.conf
+sudo cp /mnt/gentoo/usr/share/portage/config/repos.conf /mnt/gentoo/etc/portage/repos.conf/gentoo.conf
+
+dentro del archivo del repo debe estar mas o menos asi:
+
+gentoo/etc/portage/repos.conf/gentoo.conf
+---
+</code></pre><hr>
+<!-- raw HTML omitted -->
+<p>[DEFAULT]
+main-repo = gentoo
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+[gentoo]
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+location = /var/db/repos/gentoo
+<!-- raw HTML omitted -->
+sync-type = rsync
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-uri = rsync://rsync.gentoo.org/gentoo-portage
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+auto-sync = yes
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-rsync-verify-jobs = 1
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-rsync-verify-metamanifest = yes
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-rsync-verify-max-age = 24
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-openpgp-key-path = /usr/share/openpgp-keys/gentoo-release.asc
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-openpgp-key-refresh-retry-count = 40
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-openpgp-key-refresh-retry-overall-timeout = 1200
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-openpgp-key-refresh-retry-delay-exp-base = 2
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-openpgp-key-refresh-retry-delay-max = 60
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->  <!-- raw HTML omitted -->
+sync-openpgp-key-refresh-retry-delay-mult = 4
+<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<pre tabindex="0"><code>---
+
+copiar dns resolve:
+sudo cp --dereference /etc/resolv.conf /mnt/gentoo/etc/
+
+---
+montar los sistemas base raiz en gentoo:
+
+
+sudo mount --types proc /proc /mnt/gentoo/proc
+sudo mount --rbind /sys /mnt/gentoo/sys
+sudo mount --make-rslave /mnt/gentoo/sys
+sudo mount --rbind /dev /mnt/gentoo/dev
+sudo mount --make-rslave /mnt/gentoo/dev
+sudo mount --bind /run /mnt/gentoo/run
+sudo mount --make-slave /mnt/gentoo/run 
+
+---
+montar el chroot en el sistema raiz (no importa aqui si usas sudo o no) pero cuidado es importante:
+sudo chroot /mnt/gentoo /bin/bash
+sudo source /etc/profile
+sudo export PS1=&#34;(chroot) ${PS1}&#34;
+
+---
+montar particion boot:
+sudo mount /dev/sda1 /boot
+
+---
+actulizar lista de paquetes:
+sudo emerge-webrsync
+sudo emerge --sync
+sudo portageq
+
+---
+selecionar perfiles de sistema :
+sudo eselect profile list
+sudo eselect profile set 2
+---
+
+si se instala systemd si no ,no.:
+sudo emerge --ask --verbose --update --deep --newuse @world
+---
+aceptar licencias:
+portageq envvar ACCEPT_LICENSE
+@FREE
+
+crear carpeta de licencias:
+sudo mkdir /etc/portage/package.license
+
+editar archivo kernel:
+/etc/portage/package.license/kernel
+ /etc/portage/package.license/linux-firmware
+
+app-arch/unrar unRAR
+sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE
+sys-firmware/intel-microcode intel-ucode
+sys-firmware/amdgpu
+
+/* @BINARY-REDISTRIBUTABLE
+
+sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE
+sys-kernel/gentoo-kernel-bin @BINARY-REDISTRIBUTABLE
+sys-kernel/dracut @BINARY-REDISTRIBUTABLE
+app-text/asciidoc @BINARY-REDISTRIBUTABLE
+sys-kernel/gentoo-sources @BINARY-REDISTRIBUTABLE
+sys-kernel/zen-sources @BINARY-REDISTRIBUTABLE
+net-misc/dhcpcds @BINARY-REDISTRIBUTABLE
+net-misc/dhcpcd @BINARY-REDISTRIBUTABLE
+net-misc/netifrc @BINARY-REDISTRIBUTABLE
+net-misc/neofetch @BINARY-REDISTRIBUTABLE
+app-admin/sysklogd @BINARY-REDISTRIBUTABLE
+sys-process/cronie @BINARY-REDISTRIBUTABLE
+sys-process/cronbase @BINARY-REDISTRIBUTABLE
+sys-fs/e2fsprogs @BINARY-REDISTRIBUTABLE
+sys-fs/dosfstools @BINARY-REDISTRIBUTABLE
+net-wireless/iw @BINARY-REDISTRIBUTABLE
+net-wireless/wpa_supplicant @BINARY-REDISTRIBUTABLE
+net-wireless/libnl @BINARY-REDISTRIBUTABLE
+dev-libs/libnl @BINARY-REDISTRIBUTABLE
+net-wireless/wireless-regdb @BINARY-REDISTRIBUTABLE
+net-wireless/crda @BINARY-REDISTRIBUTABLE
+dev-python/m2crypto @BINARY-REDISTRIBUTABLE
+dev-lang/swig @BINARY-REDISTRIBUTABLE
+sys-boot/grub @BINARY-REDISTRIBUTABLE
+sys-boot/grub:2 @BINARY-REDISTRIBUTABLE
+sys-boot/efibootmgr @BINARY-REDISTRIBUTABLE
+sys-apps/pciutils @BINARY-REDISTRIBUTABLE
+sys-libs/efivar @BINARY-REDISTRIBUTABLE
+app-text/mandoc @BINARY-REDISTRIBUTABLE
+app-backup/rsnapshot @BINARY-REDISTRIBUTABLE
+app-mics/neofetch @BINARY-REDISTRIBUTABLE
+app-process/htop @BINARY-REDISTRIBUTABLE
+net-analyzer/iftop @BINARY-REDISTRIBUTABLE
+net-libs/libpcap @BINARY-REDISTRIBUTABLE
+app-mics/screenfetch @BINARY-REDISTRIBUTABLE
+x11-misc/pcmanfm @BINARY-REDISTRIBUTABLE
+dev-libs/atk @BINARY-REDISTRIBUTABLE
+lxde-base/menu-cache @BINARY-REDISTRIBUTABLE
+x11-libs/libfm @BINARY-REDISTRIBUTABLE
+x11-libs/libfm-extra @BINARY-REDISTRIBUTABLE
+gnome-base/gvfs @BINARY-REDISTRIBUTABLE
+gnome-base/gsettings-desktop-schemas @BINARY-REDISTRIBUTABLE
+gnome-base/gsettings-desktop-schemas- @BINARY-REDISTRIBUTABLE
+net-libs/libsoup @BINARY-REDISTRIBUTABLE
+net-libs/libsgudev @BINARY-REDISTRIBUTABLE
+net-libs/libgudev @BINARY-REDISTRIBUTABLE
+dev-libs/libgudev @BINARY-REDISTRIBUTABLE
+net-libs/nfhttp2 @BINARY-REDISTRIBUTABLE
+
+*/*  *
+
+sys-kernel/linux-firmware @BINARY-REDISTRIBUTABLE
+
+---
+configurar zona  horaria:
+
+lista paises zona horaria
+ls /usr/share/zoneinfo
+
+OpenRC
+
+añade la zona horaria al archivo timezone.
+sudo echo &#34;Europe/London&#34; &gt; /etc/timezone
+
+
+sudo emerge --config sys-libs/timezone-data
+
+systemd
+
+en systemd solo hay que crear un enlace simbolico:
+sudo ln -sf ../usr/share/zoneinfo/Europe/Brussels /etc/localtime
+
+despues ejecutar el comando timedatectl y listo. 
+
+---
+editar idioma y generar   locale :
+
+sudo nano -w /etc/locale.gen
+
+editar archivo  locale.gen: guardarlo con los cambios
+
+
+en_US ISO-8859-1
+en_US.UTF-8 UTF-8
+es_ES ISO-8859-1
+es_ES.UTF-8 UTF-8
+
+ejecutar  sudo locale-gen
+
+ejecutar selector de idiomas: ejemplo es o us
+
+sudo eselect locale list
+
+sudo eselect locale set 9
+
+
+actuliazar lista y enverimoment: (opcional)
+sudo env-update &amp;&amp; source /etc/profile &amp;&amp; export PS1=&#34;(chroot) ${PS1}&#34;
+---
+instalar firmware-kernel:
+
+sudo emerge --ask sys-kernel/linux-firmware
+
+kernel default:
+sudo emerge --ask sys-kernel/gentoo-kernel
+
+kernel gento sources actulizado recomendado:
+sudo emerge --ask sys-kernel/gentoo-sources
+
+kernel zen sources actulizado  version inferior recomendado:
+sudo emerge --ask sys-kernel/zen-sources
+
+este puede generar imagenes locales no se recomienda mucho:
+ (no recomendado)
+ 
+sudo emerge --config sys-kernel/gentoo-kernel
+sudo emerge --config sys-kernel/gentoo-kernel-bin
+
+ (recomendado)
+sudo emerge --config sys-kernel/gentoo-sources
+sudo emerge --config sys-kernel/zen-sources
+---
+selecionar kernel:
+sudo eselect kernel list
+sudo eselect kernel set 1
+---
+intalar pciutils por si acaso
+sudo emerge --ask sys-apps/pciutils
+---
+generar otra vez imagen del kernel con dracut:
+
+sudo emerge --ask sys-kernel/dracut
+sudo dracut --kver=5.15.52-gentoo
+
+para comprobar si esta creado usar el comando sudo ls /boot/initramfs*
+---
+cambiar nombre del equipo:
+
+sudo echo nombre &gt; /etc/hostname
+
+sudo hostnamectl hostname nombre
+---
+instalar adaptador de red dchp:
+
+sudo emerge --ask net-misc/dhcpcd
+
+Openrc activar servicios:
+sudo rc-update add dhcpcd default
+sudo rc-service dhcpcd start
+
+systemd activar servicios:
+sudo systemctl enable --now dhcpcd
+
+---
+instalar adaptador de red  cable:
+
+sudo emerge --ask --noreplace net-misc/netifrc
+sudo emerge --ask net-misc/netifrc
+
+editar el archivo de configuracion: sudo nano /etc/conf.d/net
+
+/etc/conf.d/net     Static IP definition
+
+config_eth0=&#34;192.168.0.2 netmask 255.255.255.0 brd 192.168.0.255&#34;
+routes_eth0=&#34;default via 192.168.0.1&#34;
+
+automatico (recomendado)
+To use DHCP, define config_eth0:
+FILE /etc/conf.d/net
+
+config_eth0=&#34;dhcp&#34;
+
+guardar archivo
+
+activar adaptador de red:
+cd /etc/init.d
+sudo ln -s net.lo net.eth0
+sudo rc-update add net.eth0 default
+
+
+cambiar seguridad del gestor de contraseñas:
+
+sudo nano /etc/security/passwdqc.conf
+
+cambiar   primera linea  ejemplo 8.8.8.8
+min= 1,1,1,1,1 por esta  guardar fichero:
+
+cambiar contraseña al root:
+
+sudo passwd
+
+escribir la que quieras recomendable la primera letra en mayus
+
+
+para openrc:
+
+editar el archivo keymaps para el teclado  fijarse esta en : es  por defecto viene en us
+
+sudo nano /etc/conf.d/keymaps
+
+para  systemd:
+
+
+sudo systemd-firstboot --prompt --setup-machine-id
+
+sudo systemctl preset-all --preset-mode=enable-only
+
+sudo systemctl preset-all
+
+
+instalar  systemloger:
+
+sudo emerge --ask app-admin/sysklogd
+sudo rc-update add sysklogd default
+
+instalar cronie:
+sudo emerge --ask sys-process/cronie
+
+sudo rc-update add cronie default
+
+Optional: File indexing  para systemd
+sudo emerge --ask sys-apps/mlocate
+
+instalar dchp  por si acaso no esta instalado:
+sudo emerge --ask net-misc/dhcpcd
+
+Optional: Installing a PPPoE client
+
+para modems dialup PPP:
+sudo emerge --ask net-dialup/ppp
+
+opcional para adaptador wifi:
+sudo emerge --ask net-wireless/iw net-wireless/wpa_supplicant
+
+instalar bootloader mbr:
+
+    sudo emerge --ask --verbose sys-boot/grub
+     
+       
+        sudo emerge --ask --verbose sys-boot/grub2 (opcional)
+
+A note for UEFI users: running the above command will output the enabled GRUB_PLATFORMS values before emerging. When using UEFI capable systems, users will need to ensure GRUB_PLATFORMS=&#34;efi-64&#34; is enabled (as it is the case by default). If that is not the case for the setup, GRUB_PLATFORMS=&#34;efi-64&#34; will need to be added to the /etc/portage/make.conf file before emerging GRUB so that the package will be built with EFI functionality:
+
+    sudo echo &#39;GRUB_PLATFORMS=&#34;efi-64&#34;&#39; &gt;&gt; /etc/portage/make.conf
+
+    sudo emerge --ask sys-boot/grub
+    
+    sudo emerge --ask sys-boot/grub2   (opcional)
+
+    If GRUB was somehow emerged without enabling GRUB_PLATFORMS=&#34;efi-64&#34;, the line (as shown above) can be added to make.conf and then dependencies for the world package set can be re-calculated by passing the --update --newuse options to emerge:
+
+    sudo emerge --ask --update --newuse --verbose sys-boot/grub
+
+The GRUB software has now been merged to the system, but not yet installed.
+Install
+
+Next, install the necessary GRUB files to the /boot/grub/ directory via the grub-install command. Presuming the first disk (the one where the system boots from) is /dev/sda, one of the following commands will do:
+
+   importante cuando usas bios clasica mbr:
+
+    sudo grub-install /dev/sda
+
+
+    importante cuando usas efi:
+
+    sudo grub-install --target=x86_64-efi --efi-directory=/boot
+    
+    
+    generar config grub:
+    sudo grub-mkconfig -o /boot/grub/grub.cfg
+    sudo grub2-mkconfig -o /boot/grub/grub.cfg (opcional)
+    
+    reniciar y desmontar el sistema:
+    Rebooting the system
+
+Para demontar el sistema y ver resultados finales
+exit
+cd
+sudo umount -l /mnt/gentoo/dev{/shm,/pts,}
+sudo umount -R /
+
+sudo reboot
+
+***reniciar y si todo sale bien botea en una terminal negra con el sistema ya instalado***
+
+añadir usuarios a los grupos
+sudo useradd -m -G users,wheel,audio -s /bin/bash pepe (ejemplo)
+sudo useradd -m -G users,wheel,video -s /bin/bash pepe 	
+
+para borrar el tarball del sistema:
+
+sudo rm -rf stage3-*.tar.  tabulas y se borra
+
+listo  sistema funcional:
+
+lo siguiente es instalar paquetes con el emerge ejemplo  neofetch  o inxi   
+sudo emerge --ask inxi
+sudo emerge --ask neofetch
+
+al ejecutar comando  inxi -Gx  o inxi -F  da informacion del sistema
+
+al ejecutar comando  neofetch  da informacion del sistema
+
+listo para distrutar de tu sistema gentoo compilado a mano desde 0
+
+todo lo demas es instalar los paquetes nesesarios para que funcione el sistema y a disfrutarlo.
+</code></pre>
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
