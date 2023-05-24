@@ -118,6 +118,17 @@ adb shell pm list packages - Muestra la lista de paquetes instalados en tu movil
 <p>fastboot flash recovery recovery.img - permite flashear un recovery en el movil</p>
 <p>fastboot flash boot boot.img - permite flashear sistema boot</p>
 <p>fastboot -w - borrra el movil</p>
+      <br>
+      </br>
+      <p>
+       ***si dan errores las paeticiones:  no queda espacio o no escribe ni hace nada: Solucion ***
+        - fastboot delete-logical-partition product or
+        - fastboot delete-logical-partition product_a 
+        - fastboot delete-logical-partition product_b
+
+fastboot --set-active=a                    fastboot --set-active=b   
+      </p>
+          
 
     </div>
     <div class="post-footer">
