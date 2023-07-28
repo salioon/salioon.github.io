@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en-us">
   <head>
-    <title>Gnome-Boxes y Virt-Manager // salion blog</title>
+    <title>Gnome-Boxes y Virt-Manager y Qemu // salion blog</title>
     <link rel="shortcut icon" href="/favicon.ico" />
     <meta charset="utf-8" />
     <meta name="generator" content="Hugo 0.111.3">
@@ -65,7 +65,7 @@
       
   <article class="post">
     <header class="post-header">
-      <h1 class ="post-title">Gnome-Boxes y Virt-Manager</h1>
+      <h1 class ="post-title">Gnome-Boxes y Virt-Manager y Qemu</h1>
       <div class="post-meta">
         <div>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
@@ -121,7 +121,7 @@
     <br </br
       
 
- </p> sudo pacman -S libvirt-runit</p>
+ <p> sudo pacman -S libvirt-runit</p>
 
   <p>sudo ln -s /etc/runit/sv/virtlogd /run/runit/service</p>
   
@@ -136,6 +136,20 @@
 <p>sudo sv start virtlogd</p>
   
 <p>sudo virtlogd -d</p>
+
+
+<br </br
+  <p>COMO USAR QEMU MANUALMENTE PARA CARGAR MAQUINAS VM:</p>
+
+    <br </br
+      
+<p>para cargar sistema con el disco cdrom:</p>
+ <p> qemu-system-x86_64   -m 4G -smp 4  --enable-kvm  -name  'Artix linux'  -boot  d -hda  /run/media/AlmacenSSD/Programas/VM/artix  -cdrom /run/media/AlmacenSSD/Programas/VM/artix-base-runit-20230710-x86_64.iso</p>
+
+      <br>  </br>
+
+<p>para cargar sistema sin el disco cdrom:</p>
+ <p> qemu-system-x86_64   -m 4G -smp 4  --enable-kvm  -name  'Artix linux'  -boot  d -hda  /run/media/AlmacenSSD/Programas/VM/artix </p>
 
       
       
