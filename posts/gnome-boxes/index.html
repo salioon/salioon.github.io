@@ -97,44 +97,44 @@
 
 <h1>Configuracion Libvirt</h1>
       
-<p> editar el archivo /etc/libvirt/libvirtd.conf  descomentar las lineas de permisos
-unix_sock_group = "libvirt"
+<p> editar el archivo /etc/libvirt/libvirtd.conf  descomentar las lineas de permisos </p>
+      
+<p>unix_sock_group = "libvirt"
   
-unix_sock_ro_perms = "0777"
+<p>unix_sock_ro_perms = "0777"
   
-unix_sock_rw_perms = "0770"
+<p>unix_sock_rw_perms = "0770"
   
-unix_sock_admin_perms = "0700"
+<p>unix_sock_admin_perms = "0700"
   
-unix_sock_dir = "/run/libvirt"
+<p>unix_sock_dir = "/run/libvirt"
 
-sudo usermod  -AG libvirt usuario 
+<p>sudo usermod  -AG libvirt usuario </p>
 
- 
-sudo systemctl enable libvirtd
+<p>sudo systemctl enable libvirtd</p>
   
-sudo systemctl start libvirtd
+<p>sudo systemctl start libvirtd</p>
   
 
-  LIBVIRT EN ARTIX:
+  <p>LIBVIRT EN ARTIX:</p>
 
-  sudo pacman -S libvirt-runit
+ </p> sudo pacman -S libvirt-runit</p>
 
-  sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
+  <p>sudo ln -s /etc/runit/sv/virtlogd /run/runit/service</p>
   
-  ln -s /etc/runit/sv/libvirt-runit 
+  <p>ln -s /etc/runit/sv/libvirt-runit</p>
 
-      ln -s /etc/runit/sv/libvirt
+     <p> ln -s /etc/runit/sv/libvirt</p>
   
-sudo sv start libvirt
+<p>sudo sv start libvirt</p>
   
-sudo sv start libvirt-runit
+<p>sudo sv start libvirt-runit</p>
   
-sudo sv start virtlogd
+<p>sudo sv start virtlogd</p>
   
-sudo virtlogd -d
+<p>sudo virtlogd -d</p>
 
-</p>
+      
       
     </div>
     <div class="post-footer">
