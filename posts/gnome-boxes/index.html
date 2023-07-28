@@ -92,8 +92,50 @@
     </header>
     <div class="post-content">
       <p><em>instalar gnome-boxes y Virt-Manager en Arch Linux:</em></p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-go" data-lang="go"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#a6e22e">sudo</span> <span style="color:#a6e22e">pacman</span> <span style="color:#f92672">-</span><span style="color:#a6e22e">S</span> <span style="color:#a6e22e">gnome</span><span style="color:#f92672">-</span><span style="color:#a6e22e">boxes</span> <span style="color:#a6e22e">virt</span><span style="color:#f92672">-</span><span style="color:#a6e22e">manager</span> 
-</span></span></code></pre></div>
+      
+<p>sudo pacman -S gnome-boxes virt-manager  qemu python python-pip python-wheel</p>
+
+<h1>Configuracion Libvirt</h1>
+      
+<p> editar el archivo /etc/libvirt/libvirtd.conf  descomentar las lineas de permisos
+unix_sock_group = "libvirt"
+  
+unix_sock_ro_perms = "0777"
+  
+unix_sock_rw_perms = "0770"
+  
+unix_sock_admin_perms = "0700"
+  
+unix_sock_dir = "/run/libvirt"
+
+sudo usermod  -AG libvirt usuario 
+
+ 
+sudo systemctl enable libvirtd
+  
+sudo systemctl start libvirtd
+  
+
+  LIBVIRT EN ARTIX:
+
+  sudo pacman -S libvirt-runit
+
+  sudo ln -s /etc/runit/sv/virtlogd /run/runit/service
+  
+  ln -s /etc/runit/sv/libvirt-runit 
+
+      ln -s /etc/runit/sv/libvirt
+  
+sudo sv start libvirt
+  
+sudo sv start libvirt-runit
+  
+sudo sv start virtlogd
+  
+sudo virtlogd -d
+
+</p>
+      
     </div>
     <div class="post-footer">
       
