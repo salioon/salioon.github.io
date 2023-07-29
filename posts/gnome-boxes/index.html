@@ -155,6 +155,40 @@
  <p> qemu-system-x86_64   -m 4G -smp 4  --enable-kvm  -name  'Artix linux'  -boot  d -hda  /run/media/AlmacenSSD/Programas/VM/artix </p>
 
 
+      <p>para Convertir un disco virtual en zip y poder descomprimir las imagesnes .img: </p>
+ <p> sudo qemu-img convert -f qcow2 -O qcow2 arch archvm.zip </p>
+      <br> </br>
+
+      </p>crear una imagen en qemu:</p>
+</p>qemu-img create -f qcow2 disco.img 30G</p>
+
+</p>convertir vmdk a qcow2:</p>
+
+</p>qemu-img convert -f vmdk -O qcow2 arch.vmdk arch.qcow2    si pones -f imagen -O  varia la saldia (opcional)</p>
+
+
+</p>convertir vhd a  qcow2:</p>
+
+</p>qemu-img convert -p -f vpc -O qcow2 centos.vhd centos.qcow2</p>
+
+</p>convertir una imagen vhdx a qcow2:</p>
+
+</p>qemu-img convert -p -f vhdx -O qcow2 centos.vhdx centos.qcow2</p>
+
+</p>convertir una imagen raw a vmdk:</p>
+
+</p>qemu-img convert -f raw -O vmdk centos.raw centos.vmdk</p>
+
+</p>convertir una imagen vmdk a raw:</p>
+
+</p>qemu-img convert -f vmdk -O raw centos.vmdk centos.raw</p>
+
+
+</p>redimiencionar una imagen en qemu:</p>
+
+</p>qemu-img resize disk_directory.img 20G</p>
+
+
       
       
     </div>
