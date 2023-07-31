@@ -157,7 +157,17 @@
 
       <p>para Convertir un disco virtual en zip y poder descomprimir las imagenes.img: para usarlas en gnome-disk-utility etc... </p>
  <p> sudo qemu-img convert -f qcow2 -O qcow2 arch archvm.zip </p>
+      
+      <p>usar (Opcional): gnome.filleroller,peazip,xarchiver para descomprimir los zip</p>
       <br> </br>
+
+     <p>para Convertir un zip y en un disco virtual qemu  qcow:  </p>
+      
+ <p>  sudo qemu-img convert -f qcow -O qcow arch.zip arch </p>
+      
+      <p>luego hay que cambiar los permisos : sudo chmod +x arch</p>
+      <br> </br>
+    
 
       </p>crear una imagen en qemu:</p>
 </p>qemu-img create -f qcow2 disco.img 30G</p>
