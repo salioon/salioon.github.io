@@ -176,10 +176,21 @@ Como usar tailscale" />
 
 
 
-<p>puedes mirar el certificado con el cat  de linux   key.pem o cert.pem  o  cert.crt   copis y pegas el contenido o el archivo donde corresponda en nginix apache2 o donde sea que lo quieras usar</p>
+<p>puedes mirar el certificado con el cat  de linux   key.pem o cert.pem  o  cert.crt   copias y pegas el contenido o el archivo donde corresponda en nginix apache2 o donde sea que lo quieras usar</p>
+<br> </br>
+<hr> </hr>
 
+<h4>apache 2 certificados:   /etc/apache2/sites-enabled/000-default.conf</h4>
+<p> <VirtualHost *:443> </p>
+    <p>    DocumentRoot /var/www/html </p>
+    <p>   ServerName pi.tail90fee9.ts.net </p>
+     <p>        sslengine on </p>
+      <p>          SSLCertificateFile /home/albert/ssl-server/cert.pem</p>
+         <p>       SSLCertificateKeyFile /home/albert/ssl-server/key.pem </p>
+<p> </VirtualHost> </p>
 
-
+<p> sudo /etc/init.d/apache2 restart</p>
+      
     </div>
     <div class="post-footer">
       
