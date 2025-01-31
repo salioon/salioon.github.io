@@ -183,10 +183,10 @@ Como usar tailscale" />
 <h4>apache 2 certificados:   /etc/apache2/sites-enabled/000-default.conf</h4>
 <p> <VirtualHost *:443> </p>
     <p>    DocumentRoot /var/www/html </p>
-    <p>   ServerName pi.tail90fee9.ts.net </p>
+    <p>   ServerName dominio.tailscale.net </p>
      <p>        sslengine on </p>
-      <p>          SSLCertificateFile /home/albert/ssl-server/cert.pem</p>
-         <p>       SSLCertificateKeyFile /home/albert/ssl-server/key.pem </p>
+      <p>          SSLCertificateFile /home/servidor/ssl-server/cert.pem</p>
+         <p>       SSLCertificateKeyFile /home/servidor/ssl-server/key.pem </p>
 <p> </VirtualHost> </p>
 
 <p> sudo /etc/init.d/apache2 restart</p>
